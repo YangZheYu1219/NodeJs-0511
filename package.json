@@ -18,5 +18,8 @@
   "homepage": "https://github.com/YangZheYu1219/NodeJs-0511#readme",
   "dependencies": {
     "cowsay": "^1.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
