@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/YangZheYu1219/NodeJs-0511/issues"
   },
-  "homepage": "https://github.com/YangZheYu1219/NodeJs-0511#readme"
+  "homepage": "https://github.com/YangZheYu1219/NodeJs-0511#readme",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
 }
