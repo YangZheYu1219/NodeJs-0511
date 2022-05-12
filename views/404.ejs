@@ -1,23 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><%= pageTitle %></title>
-	<link rel="stylesheet" href="styles/main.css">
+<%- include('./includes/header') %>
 	<style>
 		body{
-			background-color: rgb(207, 112, 245);
+			background-color: rgb(217, 142, 246);
 		}
 	</style>
 </head>
 <body>
-	<h1><%= pageTitle %></h1>
-	<img class="img404" src="images/shock.jpeg" alt="">
 
-	<a href="/">回首頁</a>
+	<div class="container-fluid">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Navbar</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Login</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+			</li>
+		  </ul>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-danger mt-5" role="alert">
+                    <h1>404! 安妮雅不喜歡這個！</h1>
+                  </div>
+				  <img class="img404 img-fluid" src="images/shock.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+<%- include('./includes/footer') %>
 
-
-</body>
 </html>

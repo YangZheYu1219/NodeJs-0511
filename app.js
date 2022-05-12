@@ -31,8 +31,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
     res.status(200)
         .render('index', {
+            //需要path來確認自己在哪個路徑
+            path: '/',
             pageTitle: "Home",
-            products
+            products: products
         })
         // .sendFile(path.join(__dirname, 'views', 'index.html'));
 });
@@ -40,6 +42,7 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.status(200)
         .render('login', {
+            path: '/login',
             pageTitle: "Login Page"
         })
         // .sendFile(path.join(__dirname, 'views', 'login.html'));
@@ -62,6 +65,7 @@ app.post('/login', (req, res) => {
 app.get('*', (req, res) => {
     res.status(404)
         .render('404', {
+            path: '/404',
             pageTitle: "Oops! Not Found This Page :("
         })
         // .sendFile(path.join(__dirname, 'views', '404.html'));
