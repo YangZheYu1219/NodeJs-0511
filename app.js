@@ -30,13 +30,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
     res.status(200)
-        .render('index')
+        .render('index', {
+            pageTitle: "this is my home"
+        })
         // .sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.get('/login', (req, res) => {
     res.status(200)
-        .render('login')
+        .render('login', {
+            pageTitle: "Login Page"
+        })
         // .sendFile(path.join(__dirname, 'views', 'login.html'));
 });
 
@@ -56,7 +60,9 @@ app.post('/login', (req, res) => {
 //使用萬用路由來顯示404要放在所有路由的最後面，否則之前設定的路由都會被導到404.html
 app.get('*', (req, res) => {
     res.status(404)
-        .render('404')
+        .render('404', {
+            pageTitle: "Oops! Not Found This Page :("
+        })
         // .sendFile(path.join(__dirname, 'views', '404.html'));
 })
 
