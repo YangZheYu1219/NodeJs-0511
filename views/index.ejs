@@ -6,10 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><%= pageTitle %></title>
 	<link rel="stylesheet" href="/styles/main.css">
+	<style>
+		.head {
+			border-radius: 50%;
+		}
+	</style>
 </head>
 <body>
 	<h1><%= pageTitle %></h1>
 	<!--因為使用了static 因此路徑不用選擇public 將結果res回傳到app.js-->
-	<img src="images/cute.png" alt="">
+	<img class="head" src="images/cute.png" alt="">
+	<br>
+	<% if(products.length > 0) { %>
+		<% products.forEach(function(product){ %>
+			<img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+			<h3><%= product.title %></h3>
+		<% }) %>
+	<% } else { %>
+		<h1>尚無商品</h1>
+	<% } %>
 </body>
 </html>
