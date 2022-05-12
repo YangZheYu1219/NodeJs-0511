@@ -19,6 +19,10 @@ app.use((req, res, next) => {
     next();
 });
 
+//static可以讓監控的資料夾下的public資料夾被選定，再利用get回傳index.html畫面
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.get('/', (req, res) => {
     res.status(200)
         .sendFile(path.join(__dirname, 'views', 'index.html'));
